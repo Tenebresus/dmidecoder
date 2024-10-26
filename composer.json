@@ -1,0 +1,16 @@
+{
+    "name": "tenebresus/dmidecoder",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Tenebresus\\Dmidecoder\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Tyler Teppema",
+            "email": "tyler.teppema@brightfish.com"
+        }
+    ],
+    "require": {}
+}
