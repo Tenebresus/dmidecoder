@@ -6,7 +6,7 @@ Table at 0x000EC700.
 
 Handle 0x0000, DMI type 0, 24 bytes
 BIOS Information
-   	Vendor: American Megatrends Inc.
+	Vendor: American Megatrends Inc.
 	Version: 3.2a
 	Release Date: 10/28/2015
 	Address: 0xF0000
@@ -483,7 +483,7 @@ On Board Device 3 Information
 Handle 0x0035, DMI type 11, 5 bytes
 OEM Strings
 	String 1: Intel SandyBridge/Patsburg/Romley
-	String 2: Supermicro motherboard-X9 Series
+	String 2: Supermicro motherboard-X9 Series 
 
 Handle 0x0036, DMI type 12, 5 bytes
 System Configuration Options
@@ -520,10 +520,10 @@ Memory Device
 	Type: DDR3
 	Type Detail: Registered (Buffered)
 	Speed: 1333 MT/s
-	Manufacturer: Micron
-	Serial Number: 378652E8
+	Manufacturer: Micron            
+	Serial Number: 378652E8    
 	Asset Tag: Dimm0_AssetTag
-	Part Number: 9KSF51272PZ-1G6E2
+	Part Number: 9KSF51272PZ-1G6E2 
 	Rank: 1
 	Configured Memory Speed: 1333 MT/s
 
@@ -550,10 +550,10 @@ Memory Device
 	Type: DDR3
 	Type Detail: Registered (Buffered)
 	Speed: 1333 MT/s
-	Manufacturer: Kingston
-	Serial Number: EB3ABBF0
+	Manufacturer: Kingston          
+	Serial Number: EB3ABBF0    
 	Asset Tag: Dimm1_AssetTag
-	Part Number: 9965433-124.A00LF
+	Part Number: 9965433-124.A00LF 
 	Rank: 1
 	Configured Memory Speed: 1333 MT/s
 
@@ -580,10 +580,10 @@ Memory Device
 	Type: DDR3
 	Type Detail: Registered (Buffered)
 	Speed: 1333 MT/s
-	Manufacturer: Micron
-	Serial Number: 4022FA87
+	Manufacturer: Micron            
+	Serial Number: 4022FA87    
 	Asset Tag: Dimm2_AssetTag
-	Part Number: 9KSF51272PZ-1G6E2
+	Part Number: 9KSF51272PZ-1G6E2 
 	Rank: 1
 	Configured Memory Speed: 1333 MT/s
 
@@ -613,7 +613,7 @@ Memory Device
 	Manufacturer: Dimm3_Manufacturer
 	Serial Number: Dimm3_SerNum
 	Asset Tag: Dimm3_AssetTag
-	Part Number: Dimm3_PartNum
+	Part Number: Dimm3_PartNum     
 	Rank: Unknown
 	Configured Memory Speed: Unknown
 
@@ -634,10 +634,10 @@ Memory Device
 	Type: DDR3
 	Type Detail: Registered (Buffered)
 	Speed: 1333 MT/s
-	Manufacturer: Micron
-	Serial Number: 37865219
+	Manufacturer: Micron            
+	Serial Number: 37865219    
 	Asset Tag: Dimm4_AssetTag
-	Part Number: 9KSF51272PZ-1G6E2
+	Part Number: 9KSF51272PZ-1G6E2 
 	Rank: 1
 	Configured Memory Speed: 1333 MT/s
 
@@ -664,10 +664,10 @@ Memory Device
 	Type: DDR3
 	Type Detail: Registered (Buffered)
 	Speed: 1333 MT/s
-	Manufacturer: Kingston
-	Serial Number: E73A78F1
+	Manufacturer: Kingston          
+	Serial Number: E73A78F1    
 	Asset Tag: Dimm5_AssetTag
-	Part Number: 9965433-124.A00LF
+	Part Number: 9965433-124.A00LF 
 	Rank: 1
 	Configured Memory Speed: 1333 MT/s
 
@@ -694,10 +694,10 @@ Memory Device
 	Type: DDR3
 	Type Detail: Registered (Buffered)
 	Speed: 1333 MT/s
-	Manufacturer: Micron
-	Serial Number: DEC2E188
+	Manufacturer: Micron            
+	Serial Number: DEC2E188    
 	Asset Tag: Dimm6_AssetTag
-	Part Number: 9KSF51272PZ-1G6E2
+	Part Number: 9KSF51272PZ-1G6E2 
 	Rank: 1
 	Configured Memory Speed: 1333 MT/s
 
@@ -727,7 +727,7 @@ Memory Device
 	Manufacturer: Dimm7_Manufacturer
 	Serial Number: Dimm7_SerNum
 	Asset Tag: Dimm7_AssetTag
-	Part Number: Dimm7_PartNum
+	Part Number: Dimm7_PartNum     
 	Rank: Unknown
 	Configured Memory Speed: Unknown
 
@@ -879,7 +879,6 @@ Management Device Component
 	Threshold Handle: 0x0054
 
 Handle 0x005A, DMI type 34, 16 bytes
-Invalid entry length (16). Fixed up to 11.
 Management Device
 	Description: LM78-2
 	Type: LM78
@@ -1274,3 +1273,4 @@ BIOS Language Information
 
 Handle 0x00A1, DMI type 127, 4 bytes
 End Of Table
+

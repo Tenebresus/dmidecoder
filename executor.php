@@ -1,5 +1,9 @@
 <?php
 
+require 'vendor/autoload.php';
+
+use Tenebresus\Dmidecoder\Parser;
+
 $dmidecode = file_get_contents('example');
 
-var_dump($dmidecode);
+$parser = new Parser($dmidecode);
