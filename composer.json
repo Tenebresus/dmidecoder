@@ -1,5 +1,6 @@
 {
     "name": "tenebresus/dmidecoder",
+    "description": "A simple dmidecode output parser",
     "type": "library",
     "autoload": {
         "psr-4": {
