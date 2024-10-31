@@ -2,11 +2,14 @@
 
 namespace Tenebresus\Dmidecoder;
 
-use Tenebresus\Dmidecoder\Type;
 
 class Parser {
 
     private string $_dmidecodeOutput;
+
+    /**
+     * @var Type[]
+     */
     private array $_types = [];
     private const array _TYPE_MAPPING = [
 
@@ -30,8 +33,6 @@ class Parser {
 
     ];
 
-    private const string _DELIMITER = '        ';
-
     public function __construct(string $dmidecodeOutput) {
 
         $this->_dmidecodeOutput = $dmidecodeOutput;
@@ -39,6 +40,76 @@ class Parser {
 
     }
 
+    /**
+     * @return Type[]
+     */
+    public function getTypes() : array {
+        return $this->_types;
+    }
+
+    public function getTypeNames() : array {
+
+        $return = [];
+
+        foreach ($this->_types as $type) {
+            $return[] = $type->getName();
+        }
+
+        return $return;
+
+    }
+
+    /**
+     * @param string $name
+     * @return Type[]|null
+     */
+    public function getTypesByName(string $name) : ?array {
+
+        $return = [];
+
+        foreach ($this->_types as $type) {
+
+            if ($type->getName() === $name) {
+                $return[] = $type;
+            }
+
+        }
+
+        return (count($return) > 0) ? $return : NULL;
+
+    }
+
+    public function getTypeDescriptions() : array {
+
+        $return = [];
+
+        foreach ($this->_types as $type) {
+            $return[] = $type->getDescription();
+        }
+
+        return $return;
+
+    }
+
+    /**
+     * @param string $description
+     * @return Type[]|null
+     */
+    public function getTypesByDescription(string $description) : ?array {
+
+        $return = [];
+
+        foreach ($this->_types as $type) {
+
+            if ($type->getDescription() === $description) {
+                $return[] = $type;
+            }
+
+        }
+
+        return (count($return) > 0) ? $return : NULL;
+
+    }
 
     private function _parse() : void {
 
@@ -57,15 +128,16 @@ class Parser {
 
             $description = $lines[1];
 
-            $type = new Type(self::_TYPE_MAPPING[$typeID], $description);
-
             array_shift($lines);
             array_shift($lines);
             array_pop($lines);
             array_pop($lines);
 
-            $test = implode("\n", $lines);
-            print_r($test . "\n\n\n\n");
+            $properties = implode("\n", $lines);
+            $fixed_properties = $this->_getTypeProperties($properties);
+
+            $type = new Type(self::_TYPE_MAPPING[$typeID], $description, $fixed_properties);
+            $this->_types[] = $type;
 
         }
 
@@ -81,14 +153,15 @@ class Parser {
 
     }
 
-    // TODO: every batch of properties needs to be filtered out through regex to gather key value pairs per property
     private function _getTypeProperties(string $properties) : array {
 
-        return [];
+        $pattern = '/\t(.+): (.+)/m';
+        $matches = [];
+        preg_match_all($pattern, $properties, $matches);
+
+        return array_combine($matches[1], $matches[2]);
 
     }
-
-
 
 
 }
