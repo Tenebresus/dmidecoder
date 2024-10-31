@@ -12,5 +12,7 @@
             "email": "tyler.teppema@brightfish.com"
         }
     ],
-    "require": {}
+    "require": {
+    	"php": ">=8.3"
+    }
 }
