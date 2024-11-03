@@ -111,6 +111,18 @@ class Parser {
 
     }
 
+    public function toJson() : string {
+
+        $return = [];
+
+        foreach ($this->_types as $type) {
+            $return[] = $type->getAllInformation();
+        }
+
+        return json_encode($return);
+
+    }
+
     private function _parse() : void {
 
         $pattern = "/^Handle.*?(?:\n(?!\n).*)*\n\n/m";

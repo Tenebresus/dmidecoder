@@ -32,6 +32,14 @@ class Type {
         return array_values($this->_properties);
     }
 
+    public function getAllProperties() : array {
+        return $this->_properties;
+    }
+
+    public function getAllInformation() : array{
+        return ['Name' => $this->_name, 'Description' => $this->_description, 'Properties' => $this->_properties];
+    }
+
     public function getProperty(string $property) : ?string {
         return $this->_properties[$property] ?? NULL;
     }
