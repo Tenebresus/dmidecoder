@@ -167,7 +167,7 @@ class Parser {
 
     private function _getTypeProperties(string $properties) : array {
 
-        $pattern = '/\t(.+): (.+)/m';
+        $pattern = '/\t(.+): (.*\S)/m';
         $matches = [];
         preg_match_all($pattern, $properties, $matches);
 
